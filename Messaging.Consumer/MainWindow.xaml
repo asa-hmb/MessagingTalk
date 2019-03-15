@@ -1,17 +1,17 @@
-﻿<Window x:Class="Messaging.Publisher.MainWindow"
+﻿<Window x:Class="Messaging.Consumer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Publisher" Height="200" Width="300">
+        Title="Consumer" Height="500" Width="700">
 	<Window.Resources>
 		<Style TargetType="{x:Type Control}" x:Key="baseStyle">
 			<Setter Property="FontSize" Value="24" />
 		</Style>
-		<Style TargetType="{x:Type Button}" BasedOn="{StaticResource baseStyle}"></Style>
+		<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource baseStyle}"></Style>
 	</Window.Resources>
-    <Grid>
-		<Button Click="ButtonClick">Publish</Button>
-    </Grid>
+	<Grid>
+		<TextBox x:Name="Output" IsReadOnly="True" VerticalScrollBarVisibility="Visible" />
+	</Grid>
 </Window>

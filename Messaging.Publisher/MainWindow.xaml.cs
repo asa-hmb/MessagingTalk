@@ -17,7 +17,7 @@ namespace Messaging.Publisher
 
 		private void ButtonClick(object sender, RoutedEventArgs e)
 		{
-			var message = $"Button clicked at {DateTime.Now.ToShortTimeString()}";
+			var message = $"Button clicked at {DateTime.Now:hh:mm:ss.fff}";
 			_publisher.Publish(message);
 		}
 	}
